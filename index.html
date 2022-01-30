@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Space Tourism</title>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <section class="flow" id="interactive-element">
+            <h1 class="numbered-title">
+                <span>03</span>
+                <!-- navigation  -->
+                <div></div>
+                <div class="flex">
+                    <div style="margin-top: 5rem;">
+                        <!-- explore buttons  -->
+                        <a href="#" class="large-button bg-white text-dark uppercase ff-serif fs-600">Explore</a>
+                    </div>
+
+                </div>
+
+            </h1>
+
+        </section>
+        <nav>
+            <ul class="primary-navigation underline-indicator flex">
+                <li class="active">
+                    <a class="uppercase text-white letter-spacing-2" href="#"> <span>01</span> Active</a>
+                </li>
+                <li>
+                    <a class="uppercase text-white letter-spacing-2" href="#"><span>02</span> Hovered</a>
+                </li>
+                <li>
+                    <a class="uppercase text-white letter-spacing-2" href="#"><span>03</span> idle</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
+            <div class="underline-indicator tab-list flex">
+                <button aria-selected="true" class="uppercase text-accent letter-spacing-2 bg-dark ff-sans-cond">Moon</button>
+                <button aria-selected="false" class="uppercase text-accent letter-spacing-2 bg-dark ff-sans-cond">Mars</button>
+                <button aria-selected="false" class="uppercase text-accent letter-spacing-2 bg-dark ff-sans-cond">Eurpoa</button>
+            </div>
+            <div class="dot-indicator  flex">
+                <button aria-selected="true"><span class="sr-only">
+                    slide
+                </span> </button>
+                <button aria-selected="false"><span class="sr-only">
+                    slide
+                </span></button>
+                <button aria-selected="false"><span class="sr-only">
+                    slide
+                </span></button>
+            </div>
+            <div class="count-indicator flex ">
+                <button aria-selected="true">1
+                    
+               </button>
+                <button aria-selected="false">2
+                    
+               </button>
+                <button aria-selected="false">3
+                    
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
