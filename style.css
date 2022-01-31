@@ -15,18 +15,39 @@
     --clr-light: 231 77% 90%;
     --clr-white: 0 0% 100%;
     /* font-sizes */
-    --fs-900: 9.375rem;
-    --fs-800: 6.25rem;
-    --fs-700: 3.5rem;
-    --fs-600: 2rem;
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
     --fs-500: 1.75rem;
-    --fs-400: 1.125rem;
+    --fs-400: 0.9375rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
     /* font family  */
     --ff-serif: 'Bellefair', serif;
     --ff-sans-cond: 'Barlow Condensed', sans-serif;
     --ff-sans-normal: 'Barlow', sans-serif;
+}
+
+@media(min-width:35em) {
+     :root {
+        /* font size */
+        /* --fs-900: 9.375rem; */
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width:45em) {
+     :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-400: 1.125rem;
+    }
 }
 
 
@@ -85,6 +106,8 @@ body {
     background-color: hsl(var(--clr-dark));
     line-height: 1.5;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
 }
 
 
@@ -139,6 +162,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.block {
+    display: block;
+}
+
 .flow>*:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
@@ -149,18 +176,50 @@ select {
     max-width: 80rem;
 }
 
+
+/* .flex.even-column>* {
+    width: 100%;
+    outline: 2px solid red;
+} */
+
 .grid-container {
+    text-align: center;
+    border: 5px solid rgb(45, 160, 84);
     display: grid;
-    gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+    padding-inline: 1rem;
+    place-items: center;
+}
+
+.grid-container>* {
+    max-width: 50ch;
+}
+
+@media (min-width:45em) {
+    .grid-container {
+        text-align: left;
+        gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+    }
+    .grid-container>*:first-child {
+        grid-column: 2;
+        outline: 2px solid red;
+    }
+    .grid-container>*:last-child {
+        grid-column: 3;
+        outline: 2px solid rgb(184, 219, 27);
+    }
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
 }
 
 .grid-container>*:first-child {
-    grid-column: 2;
+    outline: 2px solid red;
 }
 
 .grid-container>*:last-child {
-    grid-column: 3;
+    outline: 2px solid rgb(184, 219, 27);
 }
 
 .sr-only {
@@ -290,6 +349,7 @@ select {
 
 .large-button {
     position: relative;
+    font-size: 2rem;
     display: inline-grid;
     place-items: center;
     padding: 0 2em;
