@@ -384,6 +384,12 @@ select {
     backdrop-filter: blur(1.5rem);
 }
 
+@supports not (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl( var(--clr-dark) / .95);
+    }
+}
+
 .primary-navigation a {
     text-decoration: none;
 }
