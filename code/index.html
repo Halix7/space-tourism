@@ -10,26 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Our custom CSS -->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Frontend Mentor | Space tourism website</title>
-    <script defer src="../index.js"></script>
+    <script src="./navigation.js" defer></script>
 </head>
 
 <body class="home">
-    <a href="#main" class="skip-to-content">Skip to Content</a>
+    <a class="skip-to-content" href="#main">Skip to content</a>
     <header class="primary-header flex">
         <div>
             <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
         </div>
-        <button class="mobile-menu-nav" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
         <nav>
-            <ul id="primary-navigation" visible-data="false" class="primary-navigation underline-indicators flex">
-                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
-                    <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
-                        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
-                            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a></li>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a></li>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a></li>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a></li>
             </ul>
         </nav>
     </header>
@@ -42,9 +42,10 @@
             <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience! </p>
         </div>
         <div>
-            <a href="#" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
+            <a href="destination.html" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
         </div>
     </main>
+
 
 </body>
 
